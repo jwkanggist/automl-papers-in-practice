@@ -24,6 +24,8 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.idea/
+idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -104,7 +106,6 @@ venv.bak/
 .mypy_cache/
 
 # added by jwkang
+.idea/*.xml
+.idea/*.iml
 
-.idea/*
-*.xml
-*.iml
