@@ -16,6 +16,7 @@ This repository is for collecting papers and materials for the noisy label probl
 - 2015 | Training Convolutional Networks with Noisy Labels | Sainbayar Sukhbaatar, et al. | ICLR | [`PDF`](https://arxiv.org/abs/1406.2080)
 - 2018 | Learning from noisy singly-labeled data| Ashish Khetan, et al. | ICLR | [`PDF`](https://arxiv.org/pdf/1810.11874.pdf)
 - 2018 | Generalized Cross Entropy Loss for Training Deep Neural Networks with Noisy Labels | Zhilu Zhang, et al. | NIPS | [`PDF`](https://arxiv.org/pdf/1805.07836.pdf)
+- 2019 | Learning with Bad Training Data via Iterative Trimmed Loss Minimization| Yanyao Shen, et al. | ICML | [`PDF`](https://arxiv.org/abs/1810.11874)
 
 #### Meta learning
 - 2018 | Learning to Reweight Examples for Robust Deep Learning | Mengye Ren, et al. | ICML | [`PDF`](https://arxiv.org/pdf/1803.09050.pdf)
@@ -36,12 +37,15 @@ This repository is for collecting papers and materials for the noisy label probl
 - 2018 | Detecting Backdoor Attacks on Deep Neural Networks by Activation Clustering | Bryant Chen, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1811.03728.pdf)
 
 
-## ML Data Fairness Problem
-- 2019 | Identifying and Correcting Label Bias in Machine Learning| Heinrich Jiang *, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1901.04966.pdf)
+## ML Fairness Problem
+
+### Problem Overview
+- 2016 | Equality of Opportunity in Supervised Learning| Moritz Hardt, et al. | NIPS | [`PDF`](https://arxiv.org/pdf/1610.02413.pdf)
+
+### Methods
+- 2019 | Identifying and Correcting Label Bias in Machine Learning| Heinrich Jiang, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1901.04966.pdf)
 
 
-## The Others
-- 2019 | Learning with Bad Training Data via Iterative Trimmed Loss Minimization| Yanyao Shen, et al. | ICML | [`PDF`](https://arxiv.org/abs/1810.11874)
 
 # Acknowledgement
 Special thanks to everyone who contributed to this project.
