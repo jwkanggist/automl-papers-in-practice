@@ -7,7 +7,6 @@ Affiliation: Google and Stanford Univ.
 Publication: ICML2018 ([`ArXiv URL`](https://arxiv.org/abs/1712.05055), [`Github URL`](https://github.com/google/mentornet))
 
 Update date: Marco @ 191024
-
 ---
 
 
@@ -35,7 +34,7 @@ Update date: Marco @ 191024
 
 <!--![equ1](https://oss.navercorp.com/companyai/louie/blob/master/AutoML/share-reports/figs/mentornet/equ1.png)-->
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ1.png" weight="200" title="equ1">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ1.png" title="equ1">
 </p>
 
 - equ1 가 overall objective fn
@@ -55,7 +54,7 @@ Update date: Marco @ 191024
 
 <!--![equ3](https://oss.navercorp.com/companyai/louie/blob/master/AutoML/share-reports/figs/mentornet/equ3.png)-->
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ3.png" weight="200" title="equ3">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ3.png" title="equ3">
 </p>
 
 - equ3은 mentor model 학습을 위한 objective fn
@@ -65,7 +64,7 @@ Update date: Marco @ 191024
 
 <!--![equ4](https://oss.navercorp.com/companyai/louie/blob/master/AutoML/share-reports/figs/mentornet/equ4.png)-->
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ4.png" weight="200" title="equ4">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ4.png"  title="equ4">
 </p>
 
 - equ4는 equ3를 풀어 쓴것이다. 
@@ -78,12 +77,11 @@ Update date: Marco @ 191024
     - data-driven 방식
 
 
-
 #### 1) approximate **predefined** curriculums
 
 <!--![equ7](https://oss.navercorp.com/companyai/louie/blob/master/AutoML/share-reports/figs/mentornet/equ7.png)-->
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ7.png" weight="200" title="equ7">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/equ7.png"  title="equ7">
 </p>
 
 - 이 경우 mentor model은 rule (equ7)로 주어진다. 
@@ -112,7 +110,7 @@ Update date: Marco @ 191024
 
 <!--![train-arch](https://oss.navercorp.com/companyai/louie/blob/master/AutoML/share-reports/figs/mentornet/train_arch.png)-->
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/train_arch.png" weight="200" title="train-arch">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/train_arch.png"  title="train-arch">
 </p>
 
 **Training Algorithm**
@@ -125,9 +123,8 @@ Update date: Marco @ 191024
 ```
 
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/algo.png" weight="200" title="algo">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/algo.png"  title="algo">
 </p>
-
 
 
 - 커리큘럼은 훈련에 따라서 업데이트 된다
@@ -151,7 +148,7 @@ Update date: Marco @ 191024
 - workflow
 <!--![mentornet-arch](https://oss.navercorp.com/companyai/louie/blob/master/AutoML/share-reports/figs/mentornet/mentornet-arch.png)-->
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/mentornet-arch.png" weight="200" title="mentornet-arch">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/mentornet-arch.png"  title="mentornet-arch">
 </p>
 
 
@@ -179,7 +176,7 @@ Update date: Marco @ 191024
 - training set 만 오염시키고 validset은 깨끗하게 유지
 
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/table1.png" weight="200" title="table1">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/table1.png"  title="table1">
 </p>
 
 #### Methods    
@@ -207,11 +204,11 @@ Update date: Marco @ 191024
     - inception
 ```
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/table2.png" weight="200" title="table2">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/table2.png"  title="table2">
 </p>
 
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/fig3.png" weight="200" title="fig3">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/fig3.png"  title="fig3">
 </p>
 
 - remarks
@@ -234,7 +231,7 @@ Update date: Marco @ 191024
     - Inception-resnet-v2
 ``` 
 <p align="center">
-  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/table3.png" weight="200" title="table3">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/tree/master/share-reports/figs/mentornet/table3.png"  title="table3">
 </p>
 
 ### 6. Discussion
