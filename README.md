@@ -1,10 +1,6 @@
 # AutoML
 This repository is for collecting AutoML papers
 
-##  Related Projects 
-- [Khan](https://oss.navercorp.com/companyai/khan)
-
-
 
 ## Noisy Label Problem
 
@@ -84,12 +80,10 @@ Special thanks to everyone who contributed to this project.
 | Name       | Bio        |
 | :--------: | :--------: |
 | [Jaewook Kang](https://github.com/jwkanggist) | Research Scientist @Naver Clova |
-| [Jaewon Lee]() | Research Scientist @Naver Clova |
-
 
 
 ## Contact & Feedback
 If you have any suggestions (missing papers, new papers, key researchers or typos), feel free to pull a request. Also you can mail to:
-+ Jaewook Kang (jaewook.kang@navercorp.com).
++ Jaewook Kang (jwkang10@gmail.com).
 
 

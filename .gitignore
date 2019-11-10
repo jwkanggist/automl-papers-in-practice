@@ -109,3 +109,5 @@ venv.bak/
 .idea/*.xml
 .idea/*.iml
 
+*.xml
+*.iml
