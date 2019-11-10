@@ -32,10 +32,10 @@ Update date: Marco @ 191024
 
 ### 3. Method Summary
 
-![equ1](https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/mentornet/equ1.png)
-<!--<p align="center">-->
-<!--  <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/mentornet/equ1.png" title="equ1">-->
-<!--</p>-->
+<!--![equ1](https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/mentornet/equ1.png)-->
+<p align="center">
+  <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/mentornet/equ1.png" title="equ1">
+</p>
 
 - equ1 가 overall objective fn
     - w는 student model의 weight
