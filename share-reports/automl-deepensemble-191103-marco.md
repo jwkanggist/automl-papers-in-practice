@@ -278,7 +278,8 @@ the observed training example.
     - Datasetsplitter:
         - [Done] splitting 전에 qid shuffling
         - [Done] train/valid splitting 시 inter-class segment random selection ( 중복 허용X)
-        - [Done] pico branch shuffling 
+        - pico branch shuffling 
+        - spliting ratio randomization over branch
     
 - pico에서 likelihood 결합시 productive combining 가 아닌 uniformly-weighted combining 을 사용해 볼 수 있음
 
