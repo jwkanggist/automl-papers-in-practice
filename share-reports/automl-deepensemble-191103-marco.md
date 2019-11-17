@@ -285,5 +285,4 @@ the observed training example.
 
 - validSegNum에 따르는 uncertainty 측정
 - soft label을 주고 훈련 
-- 
 

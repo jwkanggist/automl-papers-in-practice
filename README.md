@@ -11,13 +11,23 @@ This repository is for collecting AutoML papers
 - 2009 | Curriculum Learning  | Yoshua Bengio et al. | ICML 2009 | [`PDF`](https://ronan.collobert.com/pub/matos/2009_curriculum_icml.pdf)
 - 2018 | Mentornet:Learning data-driven curriculum for very deep neural networks on corrupted labels | Lu Jiang, et al. | ICML | [`PDF`](https://arxiv.org/pdf/1712.05055.pdf)
 - 2018 | Co-teaching: Robust Training of Deep Neural Networks with Extremely Noisy Labels | Bo Han, et al. | NIPS | [`PDF`](https://arxiv.org/pdf/1804.06872.pdf)
-- 2018 | Curriculum Learning by Transfer Learning: Theory and Experiments with Deep Network | https://arxiv.org/abs/1802.03796 
-- 2019 | Curriculum Learning for Domain Adaptation in Neural Machine Translation | https://arxiv.org/abs/1905.05816
-- 2019 | On The Power of Curriculum Learning in Training Deep Networks | https://arxiv.org/abs/1904.03626
+- 2018 | Curriculum Learning by Transfer Learning: Theory and Experiments with Deep Network |  ICML 2018 | [`ArXiv`](https://arxiv.org/abs/1802.03796)
+<!--- 2019 | Curriculum Learning for Domain Adaptation in Neural Machine Translation | [`ArXiv`](https://arxiv.org/abs/1905.05816)-->
+<!--- 2019 | On The Power of Curriculum Learning in Training Deep Networks | [`ArXiv`](https://arxiv.org/abs/1904.03626)-->
+- 2019 | Deep Self-Learning From Noisy Labels | Jiangfan Han et al. | CVPR 2019 | [`CVPROpenAccess`](http://openaccess.thecvf.com/content_ICCV_2019/html/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.html)
+- 2019 | Learning to Learn From Noisy Labeled Data | J. Li et al. | CVPR 2019 | [`CVPROpenAccess`](http://openaccess.thecvf.com/content_CVPR_2019/html/Li_Learning_to_Learn_From_Noisy_Labeled_Data_CVPR_2019_paper.html)
 
+
+##### Noisy Label  Supervision 
+
+- 2017 | Learning From Noisy Large-Scale Datasets With Minimal Supervision | Andreas Veit et al. | CVPR 2017 | [`ArXiv`](https://arxiv.org/abs/1701.01619)
+- 2017 | Label-Free Supervision of Neural Networks with Physics and Domain Knowledge | R Stewart et al. | AAAI 2018 |  [`ArXiv`](https://arxiv.org/abs/1609.05566)
+- 2018 | Masking: A new perspective of noisy supervision | Bo Han et al. | NIPS 2018 | [`NIPSProc`](http://papers.nips.cc/paper/7825-masking-a-new-perspective-of-noisy-supervision)
 
 ##### Meta learning Approach
 - 2018 | Learning to Reweight Examples for Robust Deep Learning | Mengye Ren, et al. | ICML | [`PDF`](https://arxiv.org/pdf/1803.09050.pdf)
+
+
 
 ##### Loss functions approach
 - 2018 | Learning from noisy singly-labeled data| Ashish Khetan, et al. | ICLR | [`PDF`](https://arxiv.org/abs/1712.04577.pdf)
