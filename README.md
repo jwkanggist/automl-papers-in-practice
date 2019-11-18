@@ -23,6 +23,7 @@ This repository is for collecting AutoML papers
 - 2017 | Learning From Noisy Large-Scale Datasets With Minimal Supervision | Andreas Veit et al. | CVPR 2017 | [`ArXiv`](https://arxiv.org/abs/1701.01619)
 - 2017 | Label-Free Supervision of Neural Networks with Physics and Domain Knowledge | R Stewart et al. | AAAI 2018 |  [`ArXiv`](https://arxiv.org/abs/1609.05566)
 - 2018 | Masking: A new perspective of noisy supervision | Bo Han et al. | NIPS 2018 | [`NIPSProc`](http://papers.nips.cc/paper/7825-masking-a-new-perspective-of-noisy-supervision)
+- 2019 | Learning with Limited Data for Multilingual Reading Comprehension | Kyungjae Lee et al. | EMNLP2019 | [`EMNLP2019`]( https://www.aclweb.org/anthology/D19-1283/)
 
 ##### Meta learning Approach
 - 2018 | Learning to Reweight Examples for Robust Deep Learning | Mengye Ren, et al. | ICML | [`PDF`](https://arxiv.org/pdf/1803.09050.pdf)
