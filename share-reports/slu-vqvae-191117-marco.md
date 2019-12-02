@@ -9,13 +9,13 @@ Update date: Marco @ 191117
 
 ---
 
-1. Key Question and Hypothesis of Present Paper
+### 1. Key Question and Hypothesis of Present Paper
 - variational encoder with discrete latent variable을 사용하면 더 압축효율 feature embedding을 얻을 수 있는가?
 - VAE에서 입력에 노이즈가 큰 상황에서 일어나는 `posterior collapse` 현상을 discrete latent variable을 적용하면 해결할 수 있는가?
 
 
 
-2. Main Contributions
+###  2. Main Contributions
 - vq-vae 모델 제안
     - discrete latent variable 을 사용하는 vae 모델
     - posterior collapse 현상 극복 ?
@@ -34,9 +34,10 @@ posterior collapse 현상
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/posterial-collapse.png"  title="posterial-collapse">
 </p>
 
-3. Proposed VQ-VAE
+###  3. Proposed VQ-VAE
 
--  VAE : input x --> latent posterial q(z|x)  -->  reconstruction x_hat from p(x|z)
+#####  VAE: 
+- input x --> latent posterial q(z|x)  -->  reconstruction x_hat from p(x|z)
     - encoder:
         - 1) find posterial q(z|x) given x
         - 2) latent parameter estimation: find parameter of the posterior q(z|x)
@@ -44,8 +45,8 @@ posterior collapse 현상
     - decoder : reconstruct x_hat by sampled z_hat from the posterior q(z|x)
     
     
-- VQ-VAE:
-    - model structure: 
+##### VQ-VAE:
+
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/fig1.png"  title="fig1">
 </p>
@@ -91,6 +92,7 @@ posterior collapse 현상
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/decoder-output.png"  title="decoder-output">
 </p>    
 
+
 ```
 - [Marco's Remark] noise reduction 효과 ?
     - 사실 이것도 noise가 quantization stepsize 충분히 보다 작을때 의미 있음. 노이즈가 너무 크면 효과 없음
@@ -99,9 +101,9 @@ posterior collapse 현상
 ```       
 
 
-4. Experimental Results
+### 4. Experimental Results
 
-- image reconstruction
+##### image reconstruction
     - CIFAR10 dataset
     - model:   
         - The encoder: 2 strided convolutional layers with stride 2 and window size 4 × 4, followed by two residual 3 × 3 blocks (implemented as ReLU, 3x3 conv, ReLU, 1x1 conv), all having 256 hidden units. 
@@ -115,36 +117,45 @@ posterior collapse 현상
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/image-ex.png"  title="image-ex">
 </p>    
 
-- audio reconstruction 
+##### audio reconstruction 
     - VCTK dataset
         - 109 different speakers
     - model :
         - The encoder : 6 strided convolutions with stride 2 and window-size 4
         - The decoder :  a dilated convolutional architecture similar to WaveNet decoder
             - conditioned on the latents and one-hot vector to indicate speaker
-    - 결과1: the original and reconstruction    
-        - left - orig: 256-quantized (8bits) audio samples
-        - right - reconst from  : 256-quantized (9bits) 64x downsampled (K=512), the same speaker id
-        - 컨텍스트는 완벽하게 복원하나 억양이 조금 달라짐
+            
+```            
+- 결과1: the original and reconstruction    
+    - left - orig: 256-quantized (8bits) audio samples
+    - right - reconst from  : 256-quantized (9bits) 64x downsampled (K=512), the same speaker id
+    - 컨텍스트는 완벽하게 복원하나 억양이 조금 달라짐
+```
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/audio-reconst.png"  title="audio-reconst">
 </p> 
-     
-    - 결과2: the voice style-transfer
-        - left - orig: 256-quantized (8bits) audio samples
-        - right - reconst from  : 256-quantized (9bits) 64x downsampled (K=512), the diff speaker id
-        - 컨텍스는은 완벽하게 복원, 스피커 목소리 바뀜
+
+``` 
+- 결과2: the voice style-transfer
+    - left - orig: 256-quantized (8bits) audio samples
+    - right - reconst from  : 256-quantized (9bits) 64x downsampled (K=512), the diff speaker id
+    - 컨텍스는은 완벽하게 복원, 스피커 목소리 바뀜
+```
+
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/audio-reconst-diff.png"  title="audio-reconst-diff">
 </p> 
 
-    - 결과3: wavenet을 훈련하여 encoder 대신에 사용가능
+```
+- 결과3: wavenet을 훈련하여 encoder 대신에 사용가능
+```
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/audio-wavenet.png"  title="audio-wavenet">
 </p> 
-    - demo: the author's blog (https://avdnoord.github.io/homepage/vqvae/)
+
+- demo: the author's blog (https://avdnoord.github.io/homepage/vqvae/)
     
-- 아무나 하는 생각
+##### 아무나 하는 생각
     - 한국어 voice vq-vae 임베딩 만듬 (일단 공용데이터)
     - 필요한 음성 데이터 셋을 넣어서 다양한 스피커 id로 음성 합성가능
      
