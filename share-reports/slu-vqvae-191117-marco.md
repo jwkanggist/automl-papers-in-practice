@@ -50,44 +50,55 @@ posterior collapse 현상
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/fig1.png"  title="fig1">
 </p>
-        - encoder: 
-            - obtain output of encoder the z_e(x)
-                - 논문에는 나와있지 않지만  z_e(x)도 확률 분포이어야 말이
-            - run `one-hot encoding` given dictionary matrix E:
-<p align="center">
+
+- encoder: 
+    - obtain output of encoder the z_e(x)
+        - 논문에는 나와있지 않지만  z_e(x)도 확률 분포이어야 말이
+    - run `one-hot encoding` given dictionary matrix E:
+        - where the dictionary E works as centroid in K-means clustering 
+        - where the latent z is not continuous but a discrete latent variable 
+            - p(z) is K - categorical distribution (multinomial) and set the multinomial rate to uniform  in this work. 
+        
+ <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/equ1.png"  title="equ1">
 </p>                
-                - where the dictionary E works as centroid in K-means clustering 
-                - where the latent z is not continuous but a discrete latent variable 
-                    - p(z) is K - categorical distribution (multinomial) and set the multinomial rate to uniform  in this work. 
-        - decoder 
-            - 1) nearest-neighbour look-up z_q(x): z_e(x)와 가장 가까운  dictionary vector e_k \in {e_0,...,e_K-1} 를 사용
-                - which is the decoder input
+
+    
+- decoder 
+    - 1) nearest-neighbour look-up z_q(x): z_e(x)와 가장 가까운  dictionary vector e_k \in {e_0,...,e_K-1} 를 사용
+        - which is the decoder input
+    - 2) obtain the decoder outputs p(x|z) 
+
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/equ2.png"  title="equ2">
-</p>             
-            - 2) obtain the decoder outputs p(x|z) 
-    - about training: 
+</p>   
+          
+
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/equ3.png"  title="equ3">
-</p>    
-        - where the sg[]는 stop gradient operator
-            - backpropd의 forward pass에서는 identity
-            - backward pass에서는  zero patial derivative
-            - 즉 sg[] 안에 있는 함수는 gradient 업데이트 대상이 아니라는 것
-    - three loss terms
-        - reconstruction loss:  
-            - to train the encoder and decoder
-            - no effect on the dictionary E
-        - dictionary learning loss:
-            - for the `vector quantization` : dictionary E를 학습하기 위함
-            - E는 encoder output을 닮아가는 방향으로 (l2 norm기반) 학습됨
-            - no effect on the enc and  dec
-            -  E의 초기값은 intent의 중심벡터라고 생각하고 주면 OK
-        - commitment loss:
-            -  encoder output 과 dictionary가 보조를 맞춰서 학습되도록 강제하는 regularization loss
-    - reconstruction:
-        - given the decoder output and the latent prior p(z), we have the reconstruction as
+</p> 
+   
+- about training loss: 
+    - where the sg[]는 stop gradient operator
+        - backpropd의 forward pass에서는 identity
+        - backward pass에서는  zero patial derivative
+        - 즉 sg[] 안에 있는 함수는 gradient 업데이트 대상이 아니라는 것
+        
+- three loss terms
+    - reconstruction loss:  
+        - to train the encoder and decoder
+        - no effect on the dictionary E
+    - dictionary learning loss:
+        - for the `vector quantization` : dictionary E를 학습하기 위함
+        - E는 encoder output을 닮아가는 방향으로 (l2 norm기반) 학습됨
+        - no effect on the enc and  dec
+        -  E의 초기값은 intent의 중심벡터라고 생각하고 주면 OK
+    - commitment loss:
+        -  encoder output 과 dictionary가 보조를 맞춰서 학습되도록 강제하는 regularization loss
+        
+        
+- reconstruction:
+    - given the decoder output and the latent prior p(z), we have the reconstruction as
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/decoder-output.png"  title="decoder-output">
 </p>    
@@ -104,26 +115,26 @@ posterior collapse 현상
 ### 4. Experimental Results
 
 ##### image reconstruction
-    - CIFAR10 dataset
-    - model:   
-        - The encoder: 2 strided convolutional layers with stride 2 and window size 4 × 4, followed by two residual 3 × 3 blocks (implemented as ReLU, 3x3 conv, ReLU, 1x1 conv), all having 256 hidden units. 
-        - The decoder: two residual 3 × 3 blocks, followed by two transposed convolutions with stride 2 and window size 4 × 4. 
-    - 결과   
-        - left - orig: 128 x 128 x 3
-        - right - reconst from  : 32 x 32 x 1 (K=512)
-    - remark: (128 x 128 x 3 x 8) / (32 x 32 x 9) = 42.6 in bits로 압축가능
+- CIFAR10 dataset
+- model:   
+    - The encoder: 2 strided convolutional layers with stride 2 and window size 4 × 4, followed by two residual 3 × 3 blocks (implemented as ReLU, 3x3 conv, ReLU, 1x1 conv), all having 256 hidden units. 
+    - The decoder: two residual 3 × 3 blocks, followed by two transposed convolutions with stride 2 and window size 4 × 4. 
+- 결과   
+    - left - orig: 128 x 128 x 3
+    - right - reconst from  : 32 x 32 x 1 (K=512)
+- remark: (128 x 128 x 3 x 8) / (32 x 32 x 9) = 42.6 in bits로 압축가능
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/image-ex.png"  title="image-ex">
 </p>    
 
 ##### audio reconstruction 
-    - VCTK dataset
-        - 109 different speakers
-    - model :
-        - The encoder : 6 strided convolutions with stride 2 and window-size 4
-        - The decoder :  a dilated convolutional architecture similar to WaveNet decoder
-            - conditioned on the latents and one-hot vector to indicate speaker
+- VCTK dataset
+    - 109 different speakers
+- model :
+    - The encoder : 6 strided convolutions with stride 2 and window-size 4
+    - The decoder :  a dilated convolutional architecture similar to WaveNet decoder
+        - conditioned on the latents and one-hot vector to indicate speaker
             
 ```            
 - 결과1: the original and reconstruction    
@@ -156,6 +167,6 @@ posterior collapse 현상
 - demo: the author's blog (https://avdnoord.github.io/homepage/vqvae/)
     
 ##### 아무나 하는 생각
-    - 한국어 voice vq-vae 임베딩 만듬 (일단 공용데이터)
-    - 필요한 음성 데이터 셋을 넣어서 다양한 스피커 id로 음성 합성가능
-     
+- 한국어 voice vq-vae 임베딩 만듬 (일단 공용데이터)
+- 필요한 음성 데이터 셋을 넣어서 다양한 스피커 id로 음성 합성가능
+ 
