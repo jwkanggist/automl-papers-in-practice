@@ -3,9 +3,9 @@ Paper Authors: Aaron van den Oord, Oriol Vinyals, Koray Kavukcuoglu
 
 Affiliation: Google DeepMind
 
-Publication: NIPS2017 ([`ArXiv URL`](https://arxiv.org/abs/1711.00937), [`Github URL`](https://github.com/hiwonjoon/tf-vqvae)) [`blog`](https://avdnoord.github.io/homepage/vqvae/)›
+Publication: NIPS2017 ([`ArXiv URL`](https://arxiv.org/abs/1711.00937), [`Github URL`](https://github.com/hiwonjoon/tf-vqvae)) [`blog`](https://avdnoord.github.io/homepage/vqvae/)
 
-Update date: Marco @ 191117
+Update date: Marco @ 191203
 
 ---
 
