@@ -10,8 +10,8 @@ Update date: Marco @ 191203
 ---
 
 ### 1. Key Question and Hypothesis of Present Paper
-- variational encoder with discrete latent variable을 사용하면 더 압축효율 feature embedding을 얻을 수 있는가?
-- VAE에서 입력에 노이즈가 큰 상황에서 일어나는 `posterior collapse` 현상을 discrete latent variable을 적용하면 해결할 수 있는가?
+- variational encoder with discrete latent variable 을 사용하면 더 압축효율 feature embedding을 얻을 수 있는가?
+- VAE에서 입력에 노이즈가 큰 상황에서 일어나는 `posterior collapse` 현상을 discrete latent variable 을 적용하면 해결할 수 있는가?
 
 
 
@@ -55,6 +55,7 @@ posterior collapse 현상
     - obtain output of encoder the z_e(x)
         - 논문에는 나와있지 않지만  z_e(x)도 확률 분포이어야 말이
     - run `one-hot encoding` given dictionary matrix E:
+        - 결국  vector의 한 값 마다. interger index을 값으로 가진다. 
         - where the dictionary E works as centroid in K-means clustering 
         - where the latent z is not continuous but a discrete latent variable 
             - p(z) is K - categorical distribution (multinomial) and set the multinomial rate to uniform  in this work. 
@@ -65,7 +66,7 @@ posterior collapse 현상
 
     
 - decoder 
-    - 1) nearest-neighbour look-up z_q(x): z_e(x)와 가장 가까운  dictionary vector e_k \in {e_0,...,e_K-1} 를 사용
+    - 1) nearest-neighbour look-up z_q(x): z_e(x)와 가장 가까운  dictionary vector e_j \in E:={e_0,...,e_K-1} 를 사용
         - which is the decoder input
     - 2) obtain the decoder outputs p(x|z) 
 
@@ -80,8 +81,8 @@ posterior collapse 현상
    
 - about training loss: 
     - where the sg[]는 stop gradient operator
-        - backpropd의 forward pass에서는 identity
-        - backward pass에서는  zero patial derivative
+        - backprop의 forward pass 에서는 identity
+        - backward pass 에서는  zero partial derivative
         - 즉 sg[] 안에 있는 함수는 gradient 업데이트 대상이 아니라는 것
         
 - three loss terms
@@ -94,7 +95,7 @@ posterior collapse 현상
         - no effect on the enc and  dec
         -  E의 초기값은 intent의 중심벡터라고 생각하고 주면 OK
     - commitment loss:
-        -  encoder output 과 dictionary가 보조를 맞춰서 학습되도록 강제하는 regularization loss
+        -  encoder output 과 dictionary 가 보조를 맞춰서 학습되도록 강제하는 regularization loss
         
         
 - reconstruction:
@@ -120,9 +121,9 @@ posterior collapse 현상
     - The encoder: 2 strided convolutional layers with stride 2 and window size 4 × 4, followed by two residual 3 × 3 blocks (implemented as ReLU, 3x3 conv, ReLU, 1x1 conv), all having 256 hidden units. 
     - The decoder: two residual 3 × 3 blocks, followed by two transposed convolutions with stride 2 and window size 4 × 4. 
 - 결과   
-    - left - orig: 128 x 128 x 3
-    - right - reconst from  : 32 x 32 x 1 (K=512)
-- remark: (128 x 128 x 3 x 8) / (32 x 32 x 9) = 42.6 in bits로 압축가능
+    - left - orig: 128 x 128 x 3 (256 levels)
+    - right - reconst from  : 32 x 32 x 1 (K=512 dim)
+- remark: (128 x 128 x 3 (RGB) x 8(bits/pixel)) / (32 x 32 x 9 (bits/pixel)) = 42.6 in bits 로 압축가능??
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/vq-vae/image-ex.png"  title="image-ex">
@@ -139,7 +140,7 @@ posterior collapse 현상
 ```            
 - 결과1: the original and reconstruction    
     - left - orig: 256-quantized (8bits) audio samples
-    - right - reconst from  : 256-quantized (9bits) 64x downsampled (K=512), the same speaker id
+    - right - reconst from  : 256-quantized (8bits) 64x downsampled (K=512), the same speaker id
     - 컨텍스트는 완벽하게 복원하나 억양이 조금 달라짐
 ```
 <p align="center">
@@ -149,7 +150,7 @@ posterior collapse 현상
 ``` 
 - 결과2: the voice style-transfer
     - left - orig: 256-quantized (8bits) audio samples
-    - right - reconst from  : 256-quantized (9bits) 64x downsampled (K=512), the diff speaker id
+    - right - reconst from  : 256-quantized (8bits) 64x downsampled (K=512), the diff speaker id
     - 컨텍스는은 완벽하게 복원, 스피커 목소리 바뀜
 ```
 
@@ -170,3 +171,7 @@ posterior collapse 현상
 - 한국어 voice vq-vae 임베딩 만듬 (일단 공용데이터)
 - 필요한 음성 데이터 셋을 넣어서 다양한 스피커 id로 음성 합성가능
  
+##### 기타
+- long term dependency를 압축해서 저장한다 (video example)
+- K는 nlp embedding에서 vocab size이다
+- 
