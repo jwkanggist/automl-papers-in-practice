@@ -65,6 +65,9 @@ This repository is for collecting AutoML papers
 ## Intent/slot Clustering
 - 2018 | Auto-Dialabel: Labeling Dialogue Data with Unsupervised Learning | Chen Shi, et al. | EMNLP | [`PDF`](https://www.aclweb.org/anthology/D18-1072) [`Marco Slide`](https://docs.google.com/presentation/d/1FZiURnMyv7F7aEuCtZLx-f-bezVaCAUTO2ftBqRdR8Y/edit#slide=id.p) (Presenter: Jaewook Kang@ 190629)
 
+## Data Profiling
+- 2012 | The Influence of Corpus Quality on Statistical Measurements on Language Resources | Thomas Eckart et al. | [LREC 2012 proceeding](http://www.lrec-conf.org/proceedings/lrec2012/pdf/476_Paper.pdf)
+
 
 
 <!--## Backdoor Attack Problem-->
