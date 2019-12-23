@@ -92,11 +92,12 @@ numbers and some special characters.
 
 
 #### exemplary distribution :  sentence length
+- near duplicated sentence가 two peaks in the distribution의 원인
+
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/fig1.png" title="fig1">
 </p>
-
 
 1) The first peak is due to a large set of nearly identical
 sentences that were not removed by duplicate detection:
