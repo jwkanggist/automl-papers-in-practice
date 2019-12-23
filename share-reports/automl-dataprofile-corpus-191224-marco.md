@@ -31,12 +31,14 @@ Update date: Marco @ 191224
 ### 전처리에 따른 데이터 감소 
 
 #### 문장 수준 전처리 
+```
 (a) Boilerplate removal
 (b) Removal of foreign language parts (whole texts
 or sentences)
 (c) (Optional) Removal of parts which are not wellformed sentences, using pattern matching methods
 (d) (Optional) Removal of duplicate sentences
 (e) (Optional)  Removal of near duplicate sentences
+```
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/table1.png" title="table1">
@@ -47,6 +49,7 @@ or sentences)
 
 
 #### 단어 수준 전처리
+```
 (a) Boilerplate removal
 (b) Removal of foreign language parts (whole texts
 or sentences)
@@ -54,7 +57,7 @@ or sentences)
 that contained characters not in a specified set of letters,
 numbers and some special characters.
 (d) removal of all words containing numbers and other ill-formed terms based on set of patterns.
-
+```
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/table2.png" title="table2">
