@@ -69,12 +69,13 @@ numbers and some special characters.
 
 ### 통계적 지표
 
+```
 • Number of tokens: 코퍼스를 이루는 단어의 개수
 • Type-Token-Ratio: | Number of Types | / | Number of tokens | 로 정의
 - Types: uniques words in corpus
 • Average word length: 코퍼스 안에 존재하는 워드의 평균 길이 
 • Average sentence length: 코퍼스 안에 존재하는 문장 평균 길이 (문장을 구성하는 토큰수)
-
+```
 
 
 <p align="center">
