@@ -73,8 +73,8 @@ numbers and some special characters.
 • Number of tokens: 코퍼스를 이루는 단어의 개수
 • Type-Token-Ratio: | Number of Types | / | Number of tokens | 로 정의
 - Types: uniques words in corpus
-• Average word length: 코퍼스 안에 존재하는 워드의 평균 길이 
-• Average sentence length: 코퍼스 안에 존재하는 문장 평균 길이 (문장을 구성하는 토큰수)
+• Average word length: 코퍼스 안에 존재하는 워드의 평균 길이 (워드를 구성하는 char수로 측정)
+• Average sentence length: 코퍼스 안에 존재하는 문장 평균 길이 (문장을 구성하는 토큰수로 측정)
 ```
 
 
