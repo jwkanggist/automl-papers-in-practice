@@ -136,7 +136,7 @@ sentences that were not removed by duplicate detection:
 > remark1: near-dup가 코퍼스의 품질을 주요한게 여해함
 
 ### Discussion and TODO
-> Khan Dataprofiling feature에 아래 추가 예정
+> Khan Dataprofiling feature에 아래 추가 예정 ( 하지만 아래의 지표가 좋은 지표라는 validation 은 없음)
 - Number of types
 - TTR
 - Average word length 
