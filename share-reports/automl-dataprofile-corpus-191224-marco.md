@@ -47,6 +47,10 @@ or sentences)
 - after pattern based cleaning : (a)-(c)
 - after duplicate removal: (a)-(e)
 
+> Remark1: 문장 수준 전처리와 단어 수준 전처리르 구분한다
+
+> Remark2: 문장 수준 전처리는 감소량이 크다 
+
 
 #### 단어 수준 전처리
 ```
@@ -74,17 +78,23 @@ numbers and some special characters.
 • Type-Token-Ratio: | Number of Types | / | Number of tokens | 로 정의
 - Types: uniques words in corpus
 • Average word length: 코퍼스 안에 존재하는 워드의 평균 길이 (워드를 구성하는 char수로 측정)
-• Average sentence length: 코퍼스 안에 존재하는 문장 평균 길이 (문장을 구성하는 토큰수로 측정)
+• Average sentence length: 코퍼스 안에 존재하는 문장 평균 길이 (문장을 구성하는 토수로 측정)
 ```
 
+> 토큰은 공백 
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/table3.png" title="table3">
 </p>
 
+> remark3: 전처리에 따른 토큰수 감소는 크지 않음
+
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/table4.png" title="table4">
 </p>
+
+> 전처리에 따른 특수문자 / 유효하지 않은 문자 제거에 따른 type수의 큰 감소 
+> TTR이 영어의 감소폭이 두드러짐 (다양한 유입)
 
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/table5.png" title="table5">
@@ -93,6 +103,10 @@ numbers and some special characters.
 <p align="center">
   <img src="https://github.com/jwkanggist/automl-papers-in-practice/blob/master/share-reports/figs/lrec2012/table6.png" title="table6">
 </p>
+
+> 첫번째 전처리에서 HTML/JavaScript Markup, Email, URL 형식이 포함되는 경우 제거 제거 하는 것에서 word length 감소
+
+>  숫자/특수문자를 포함하는 단어 정제에서 증가 ? 
 
 
 #### exemplary distribution :  sentence length
@@ -125,4 +139,6 @@ donesia. ´
 ```
 
 #### remarks
+> Number of types / TTR / Average word length 추가 적용 예
 
+> 수나 특수기호 다름에 따른 near-dup 문장 카운트 기준 정하기 
