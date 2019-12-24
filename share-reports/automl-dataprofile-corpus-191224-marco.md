@@ -20,13 +20,13 @@ Update date: Marco @ 191224
 
 
 ### Main Contributions
-- 전처리에 따른 코퍼스 데이터 량 감소를 보여줌
+- 전처리에 따른 코퍼스 데이터량 변 경향을 보여줌
 - 코퍼스의 통계적 지표의 정리
 
 
 ### 전제
 - 좋은 코퍼스의 지표는 bell-shaped distribution을 가진다. (본인 논문 인용)
-
+- 논문에서 사용한 데이터 소스:  newspaper + Wikipedia articles + Web pages
 
 ### 전처리에 따른 데이터 감소 
 
@@ -67,7 +67,7 @@ numbers and some special characters.
 - Additional cleaning procedures : (a)-(d)
 
 
-#### 통계적 지표
+### 통계적 지표
 
 • Number of tokens: 코퍼스를 이루는 단어의 개수
 • Type-Token-Ratio: | Number of Types | / | Number of tokens | 로 정의
