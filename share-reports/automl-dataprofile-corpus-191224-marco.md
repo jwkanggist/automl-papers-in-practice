@@ -121,22 +121,16 @@ numbers and some special characters.
 > 1) The first peak is due to a large set of nearly identical
 sentences that were not removed by duplicate detection:
 ```
-• Taun ka-1118 Masehi dina Kal ´ ender Gr ´ egorian. ´
-• Taun ka-1119 Masehi dina Kal ´ ender Gr ´ egorian. ´
-• Taun ka-1120 Masehi dina Kal ´ ender Gr ´ egorian. 
+• Taun ka-1118 Masehi dina Kal  ender Gr ´ egorian. 
+• Taun ka-1119 Masehi dina Kal  ender Gr ´ egorian. 
+• Taun ka-1120 Masehi dina Kal  ender Gr ´ egorian. 
 ```
 
 > 2) The second peak is due to the following kind of sentences:
 ```
-• Ancol nyaeta salasahiji d ´ esa di kacamatan Cin ´ eam, ´
-Kabupaten Tasikmalaya, Propinsi Jawa Barat, In- ´
-donesia. ´
-• Babakan nyaeta salasahiji d ´ esa di kacamatan ´
-Wanayasa, Kabupaten Purwakarta, Propinsi Jawa ´
-Barat, Indonesia. ´
-• Bakung Lor nyaeta salasahiji d ´ esa di kacamatan Klan- ´
-genan, Kabupaten Cirebon, Propinsi Jawa Barat, In- ´
-donesia. ´
+• Ancol nyaeta salasahiji d ´ esa di kacamatan Cineam, ´Kabupaten Tasikmalaya, Propinsi Jawa Barat, In-donesia. 
+• Babakan nyaeta salasahiji d ´ esa di kacamatan Wanayasa, Kabupaten Purwakarta, Propinsi Jawa Barat, Indonesia. 
+• Bakung Lor nyaeta salasahiji d ´ esa di kacamatan Klan-genan, Kabupaten Cirebon, Propinsi Jawa Barat, In-donesia. 
 ```
 
 > remark1: near-dup가 코퍼스의 품질을 주요한게 여해함
